@@ -1,0 +1,22 @@
+@server = https://EvaluacionContinua03.onrender.com
+
+################ Categorias: 
+###
+GET {{server}}/categorias
+###
+POST {{server}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Viento"}
+################ Instrumentos: 
+###
+GET {{server}}/instrumentos
+###
+POST {{server}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Trompeta", "categoria": "http://localhost/api/ec3/categorias/1"}
+###
+GET {{server}}/instrumentos/1/categoria
+###
+GET {{server}}/instrumentos?sort=nombre,desc
